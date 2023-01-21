@@ -1,0 +1,21 @@
+name: Python Version Compatibility Check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip3 install -r requirements.txt
+
