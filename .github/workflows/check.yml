@@ -16,10 +16,10 @@ jobs:
 
       - name: Install Python
         run: -|
-          add-apt-repository ppa:deadsnakes/ppa -y &&
-          apt update && apt install python3.11-full -y
+          sudo add-apt-repository ppa:deadsnakes/ppa -y &&
+          sudo apt update && sudo apt install python3.11-full -y
           
 
       - name: Install Dependencies
-        run: pip3 install -r requirements.txt
+        run: sudo pip3 install -r requirements.txt
 
