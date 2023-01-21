@@ -16,7 +16,7 @@ jobs:
 
       - name: Install Python
         run: -|
-          add-apt-repository ppa:deadsnakes/ppa -y
+          add-apt-repository ppa:deadsnakes/ppa -y &&
           apt update && apt install python3.11-full -y
           
 
